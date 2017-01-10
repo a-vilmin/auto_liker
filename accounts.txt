@@ -1,0 +1,13 @@
+ArmchairBig12
+ACAllAmericans
+ArmchairSEC
+ArmchairBigTen
+ArmchairNBA
+ArmchairCBB
+ArmchairNHL
+ArmchairOuter5
+ArmchairACC
+ArmchairMLB
+ArmchairNFL
+ArmchairRecruit
+ArmchairPac12
