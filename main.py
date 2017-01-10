@@ -52,8 +52,11 @@ def main():
     if len(sys.argv) != 3:
         print("Make sure to put in the auth and accounts filename")
         sys.exit(1)
-
-    consumer_key, consumer_secret, access_token, token_secret = get_auths()
+    try:
+        consumer_key, consumer_secret, access_token, token_secret = get_auths()
+    except:
+        print("There are not enough values in your secrets file. Try again")
+        sys.exit(1)
 
     try:
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
