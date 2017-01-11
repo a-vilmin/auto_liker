@@ -26,8 +26,9 @@ def like_tweets(api, name):
     while(main_acc[0].created_at > yesterday):
         for tweet in main_acc:
             try:
-                api.create_favorite(tweet.id)
-                i += 1
+                if not tweet.favorited:
+                    api.create_favorite(tweet.id)
+                    i += 1
             except tweepy.TweepError:
                 continue
         main_acc = api.user_timeline(screen_name=name,
